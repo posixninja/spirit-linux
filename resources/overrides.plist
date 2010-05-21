@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>com.apple.SpringBoard</key>
+    <dict>
+        <key>Disabled</key>
+        <true/>
+    </dict>
+
+    <key>com.apple.tcpdump.server</key>
+    <dict>
+        <key>KeepAlive</key>
+        <true/>
+        <key>Label</key>
+        <string>com.apple.tcpdump.server</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/sbin/launchd</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>LaunchOnlyOnce</key>
+        <true/>
+        <key>UserName</key>
+        <string>root</string>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>DYLD_INSERT_LIBRARIES</key>
+            <string>/var/mobile/Media/spirit/one.dylib</string>
+        </dict>
+    </dict>
+</dict>
+</plist>
+
