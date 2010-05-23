@@ -18,10 +18,12 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA 
  */
- 
+
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 #include <sys/time.h>
 #include <openssl/sha.h>
 #include <plist/plist.h>
@@ -119,8 +121,8 @@ static int send_over(afc_client_t afc, const char* source, const char* destinati
 		return -1;
 	}
 
-	size_t w = 0;
-	size_t r = fread(buffer, 1, BUFSIZE, fd);
+	uint32_t w = 0;
+	uint32_t r = fread(buffer, 1, BUFSIZE, fd);
 	while(r > 0) {
 		afc_file_write(afc, handle, buffer, r, &w);
 		if(w <= 0) return -1;
