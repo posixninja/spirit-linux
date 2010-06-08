@@ -245,6 +245,7 @@ static void start_restore(mobilebackup_client_t backup, plist_t files) {
 	plist_dict_insert_item(mdict, "BackupNotifySpringBoard", plist_new_bool(1));
 	plist_dict_insert_item(mdict, "BackupProtocolVersion", plist_new_string("3.0"));
 	plist_dict_insert_item(mdict, "BackupPreserveCameraRoll", plist_new_bool(1));
+	plist_dict_insert_item(mdict, "BackupPreserveSettings", plist_new_bool(1));
 	plist_dict_insert_item(mdict, "BackupManifestKey", manifest);
 
 	plist_t message = plist_new_array();
