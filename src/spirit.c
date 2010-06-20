@@ -370,7 +370,7 @@ static void restore_thread() {
 	//plist_free(files);
 }
 
-int main(int argc, char** argv) {
+int perform_jailbreak() {
 	char uuid[41];
 	int count = 0;
 	char **list = NULL;
